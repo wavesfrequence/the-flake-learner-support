@@ -1,0 +1,500 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 1.3rem;
+}
+
+.privacy-badge {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #bae6fd;
+}
+
+.hero-headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-subheading {
+  font-size: 1.25rem;
+  color: #0369a1;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  color: #0c7fb5;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== ROLE SELECTOR ===== */
+.role-selector-container {
+  padding: 2rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.role-selector-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.role-card {
+  padding: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.role-card:hover {
+  border-color: #0ea5e9;
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.1);
+}
+
+.role-card.active {
+  border-color: #0369a1;
+  background: #e0f2fe;
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.2);
+}
+
+.role-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.role-card-description {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #06b6d4, #0369a1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-greeting {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.user-info {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0369a1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Activity section */
+.activity-section {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.activity-list {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.activity-list-heading {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.activity-item {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-subject {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.activity-timestamp {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.status-steady {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-watch {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-attention {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Support panel */
+.support-panel {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.support-panel-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.support-panel-description {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.btn-support {
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #06b6d4, #0369a1);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-support:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
+}
+
+/* Educator-specific */
+.student-list {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.student-item {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.student-item:last-child {
+  border-bottom: none;
+}
+
+.student-name {
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.student-class {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Guardian-specific */
+.guardian-child-card {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.child-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.child-metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.child-metric:last-child {
+  border-bottom: none;
+}
+
+.child-metric-label {
+  color: #64748b;
+}
+
+.child-metric-value {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.message-button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #06b6d4, #0369a1);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.message-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+
+  .hero-subheading {
+    font-size: 1rem;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .privacy-badge {
+    text-align: center;
+  }
+
+  .role-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-section {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-headline {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-item,
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+}
